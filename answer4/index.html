@@ -39,7 +39,7 @@
                     <span id="password-error" class=""></span>
                     <input id="repass" type="password" placeholder="repeat password" type="text">
                     <span id="repass-error" class=""></span>
-                    <button type="submit" onsubmit="return submit()" onclick="return Validation()">Submit</button>
+                    <button type="submit" onsubmit="submit()" onclick="return Validation()">Submit</button>
                 </form>
             </div>
         </div>
@@ -84,8 +84,6 @@
             repass.focus();
             return false;
         }
-    }
-    function submit(){
-        alert('asdfasdf');
+        alert('Click ok to Submit');
     }
 </script>
