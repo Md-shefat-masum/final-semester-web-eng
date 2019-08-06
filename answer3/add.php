@@ -1,25 +1,31 @@
 <?php 
     $con=mysqli_connect('localhost','root','','student_infor');
+    if(!$con){
+        echo "<script> alert('db not success'); </script>";
+    }
     if(!empty($_POST)){
-        $name=$_POST['name'];
-        $roll=$_POST['roll'];
-        $department=$_POST['department'];
-        $first=$_POST['first'];
-        $second=$_POST['second'];
-        $third=$_POST['third'];
-        $fourth=$_POST['fourth'];
-        $fifth=$_POST['fifth'];
-        $sixth=$_POST['sixth'];
-        $seventh=$_POST['seventh'];
-        $eighth=$_POST['eighth'];
-        $insert="INSERT INTO student_infor(name,roll,department,first,second,third,fourth,fifth,sixth,seventh,eighth)
-                            VALUES('$name','$roll','$department','$first','$third','$fourth','$fifth','$sixth','$seventh','$eighth')";
+        $name = $_POST['name'];
+        $roll = $_POST['roll'];
+        $department = $_POST['department'];
+        $first = $_POST['first'];
+        $second = $_POST['second'];
+        $third = $_POST['third'];
+        $fourth = $_POST['fourth'];
+        $fifth = $_POST['fifth'];
+        $sixth = $_POST['sixth'];
+        $seventh = $_POST['seventh'];
+        $eighth = $_POST['eighth'];
+        $insert = "INSERT INTO gpa(name,roll,department,first,second,third,fourth,fifth,sixth,seventh,eighth)
+                            VALUES('$name','$roll','$department','$first','$second','$third','$fourth','$fifth','$sixth','$seventh','$eighth')";
 
         if(mysqli_query($con,$insert)){
-            echo "succecc";
+            echo "succeccss";
+        }
+        else{
+            echo "<script> alert('not success'); </script>";
         }
     }
-    
+    // VALUES('$name','$roll','$department','$first','$third','$fourth','$fifth','$sixth','$seventh','$eighth')";
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,7 +57,7 @@
     <section id="login">
         <div class="container">
             <div class="login">
-                <form action="add.php" method="POST" style="" class="">
+                <form action="" method="post" style="" class="">
                     <h2>Student Result Information</h2>
                     <input name="name" type="text" placeholder="name">
                     <input name="roll" type="text" placeholder="Roll">

@@ -1,3 +1,6 @@
+<?php 
+    $con=mysqli_connect('localhost','root','','student_infor');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,48 +47,24 @@
                     </td>
                 </tr>
                 <tbody>
+                    <?php 
+                        $select = "SELECT * FROM gpa";
+                        $all = mysqli_query($con,$select);
+                        while( $data = mysqli_fetch_assoc($all)){
+                    ?>
                     <tr>
-                        <td>124323</td>
+                        <td><?= $data['id'];?></td>
+                        <td><?= $data['name'];?></td>
+                        <td><?= $data['roll'];?></td>
+                        <td><?= $data['department'];?></td>
                         <td>
-                            Habib
-                        </td>
-                        <td>18</td>
-                        <td>CSE</td>
-                        <td>
-                            4.00
+                            count
                         </td>
                         <td>
                             +
                         </td>
                     </tr>
-                    <tr>
-                        <td>124323</td>
-                        <td>
-                            Habib
-                        </td>
-                        <td>18</td>
-                        <td>CSE</td>
-                        <td>
-                            4.00
-                        </td>
-                        <td>
-                            +
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>124323</td>
-                        <td>
-                            Habib
-                        </td>
-                        <td>18</td>
-                        <td>CSE</td>
-                        <td>
-                            4.00
-                        </td>
-                        <td>
-                            +
-                        </td>
-                    </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>
