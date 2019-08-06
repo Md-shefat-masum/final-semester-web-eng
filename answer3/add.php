@@ -19,7 +19,7 @@
                             VALUES('$name','$roll','$department','$first','$second','$third','$fourth','$fifth','$sixth','$seventh','$eighth')";
 
         if(mysqli_query($con,$insert)){
-            echo "succeccss";
+            echo "<script> alert('success'); </script>";
         }
         else{
             echo "<script> alert('not success'); </script>";

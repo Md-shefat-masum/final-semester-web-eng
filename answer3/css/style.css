@@ -48,9 +48,9 @@ a{
 .nav .right ul li a {
     font-size: 18px;
     text-transform: capitalize;
-    padding: 27px 30px;
+    padding: 24px 30px;
     display: inline-block;
-    color: black;
+    color: rgb(255, 255, 255);
     transition: all linear .3s;
     text-decoration: none;
 }
@@ -58,7 +58,7 @@ a{
 .nav .right ul li a:hover,
 .nav .right ul li a:focus {
     background: #202d44;
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 body{

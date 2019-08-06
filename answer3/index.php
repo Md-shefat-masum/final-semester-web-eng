@@ -38,7 +38,7 @@
                         <th>Roll</th>
                         <th>Department</th>
                         <th>GPA</th>
-                        <th>Actions</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tr>
@@ -58,10 +58,10 @@
                         <td><?= $data['roll'];?></td>
                         <td><?= $data['department'];?></td>
                         <td>
-                            count
+                            <?php printf("%.2f", ($data['first'] + $data['second'] + $data['third'] + $data['fourth'] + $data['fifth'] + $data['sixth'] + $data['seventh'] + $data['eighth'] )/8)?>
                         </td>
                         <td>
-                            +
+                            <a href="delete.php?d=<?= $data['id'];?>">Delete</a>
                         </td>
                     </tr>
                     <?php } ?>
