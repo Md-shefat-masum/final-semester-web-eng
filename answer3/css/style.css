@@ -9,6 +9,7 @@ a{
 }
 #nav {
     background: radial-gradient(#142d31c7, transparent);
+    height: 70px;
 }
 
 .nav {
