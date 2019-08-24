@@ -1,3 +1,13 @@
 body{
     background: #f5f5f5;
 }
+
+/* answer2 */
+a{
+    font-size: 18px;
+    font-weight: 700;
+}
+a:hover{
+    text-decoration: none;
+    color: rgb(93, 6, 47);
+}
