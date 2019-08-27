@@ -30,9 +30,9 @@
             <input type="checkbox"><span>male</span>
             <input type="checkbox"><span>female</span>
             <label for="">your role</label>
-            <input type="radio"><span>student</span>
-            <input type="radio"><span>class captain</span>
-            <input type="radio"><span>trainer</span><br>
+            <input type="radio" name=""><span>student</span>
+            <input type="radio" name=""><span>class captain</span>
+            <input type="radio" name=""><span>trainer</span><br>
             <button type="submit">submit</button>
             <button type="reset">reset</button>
         </form>
