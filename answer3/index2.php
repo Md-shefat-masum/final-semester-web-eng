@@ -58,6 +58,7 @@
             <input type="checkbox" name="gender" value="male"><span>male</span>
             <input type="checkbox" name="gender" value="female"><span>female</span>
             <label for="">your role</label>
+            <input type="radio" name="student" hidden checked value="">
             <input type="radio" name="student" value="student"><span>student</span>
             <input type="radio" name="captains" hidden checked value="">
             <input type="radio" name="captains" value="captain"><span>class captain</span>
