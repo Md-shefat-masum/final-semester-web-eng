@@ -10,12 +10,20 @@
         $password = $_POST['password'];
         $department = $_POST['department'];
         $gender = $_POST['gender'];
-        $role1 = $_POST['role1'];
-        $role2 = $_POST['role2'];
-        $role3 = $_POST['role3'];
+        $role1 = $_POST['student'];
+        $role2 = $_POST['captains'];
+        $role3 = $_POST['trainer'];
+        if( empty($role1))$role1= "";
+        if( empty($role2))$role2= "";
+        if( empty($role3))$role3= "";
         $insert = "INSERT INTO student_information(name,email,password,department,gender,role1,role2,role3)
-                                    values($name,$email,$password,$department,$gender,$role1,$role2,$role3
-                                        )";
+                                    values('$name','$email','$password','$department','$gender','$role1','$role2','$role3')";
+        if(mysqli_query($con,$insert)){
+            echo "<script> alert('success'); </script>";
+        }
+        else{
+            echo "<script> alert('not success'); </script>";
+        }
     }
 ?>
 <!DOCTYPE html>
@@ -30,8 +38,8 @@
 <body>
     <div class="body">
         <div class="nav">
-            <a href="addnew.php">add new record</a>
-            <a href="addnew.php">view record</a>
+            <a href="index2.php">add new record</a>
+            <a href="view.php">view record</a>
         </div>
         <form action="index2.php" method="POST">
             <label for="">your name</label>
@@ -51,7 +59,9 @@
             <input type="checkbox" name="gender" value="female"><span>female</span>
             <label for="">your role</label>
             <input type="radio" name="student" value="student"><span>student</span>
-            <input type="radio" name="captain" value="captain"><span>class captain</span>
+            <input type="radio" name="captains" hidden checked value="">
+            <input type="radio" name="captains" value="captain"><span>class captain</span>
+            <input type="radio" name="trainer" hidden checked value="">
             <input type="radio" name="trainer" value="trainer"><span>trainer</span><br>
             <button type="submit">submit</button>
             <button type="reset">reset</button>
