@@ -19,8 +19,9 @@
         function add(){
             var parent = document.getElementById('body');
             var div = document.createElement('div');
-            div.innerHTML("<h1>jflskd</h1>");
-            document.parent.appendChild(div);
+            var value = document.getElementById('value').value;
+            div.innerHTML = value ;
+            parent.appendChild(div);
         }
     </script>
 </head>
@@ -33,10 +34,8 @@
             <h4>click to remove this section</h4>
         </div>
         <div class="section">
-            <form action="">
-                <input type="text" placeholder="write tag and information and add to body">
-                <button onclick="add()">add new section</button>
-            </form>
+            <input type="text" id="value" placeholder="write tag and information and add to body">
+            <button onclick="add()">add new section</button>
         </div>
     </div>
 </body>
