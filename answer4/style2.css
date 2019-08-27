@@ -1,0 +1,29 @@
+.body{
+    width: 700px;
+    margin: 0 auto;
+    background: #f5f5f5;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.section{
+    overflow: hidden;
+    width: 100%;
+    padding: 10px;
+    background: white;
+    box-sizing: border-box;
+    margin: 15px 0px;
+    cursor: pointer;
+}
+
+input{
+    width:100%;
+    padding: 10px; 
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button{
+    padding: 10px 20px;
+    cursor: pointer;
+}

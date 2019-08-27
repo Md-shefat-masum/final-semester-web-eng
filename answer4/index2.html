@@ -5,20 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <script>
+        function hover(){
+            document.getElementById('hover').style.color="red";
+        }
+        function out(){
+            document.getElementById('hover').style.color="black";
+        }
+        function remove(){
+            document.getElementById('remove').remove();
+        }
+        function add(){
+            var parent = document.getElementById('body');
+            var div = document.createElement('div');
+            div.innerHTML("<h1>jflskd</h1>");
+            document.parent.appendChild(div);
+        }
+    </script>
 </head>
 <body>
-    <div class="body">
-        <div class="section">
+    <div class="body" id="body">
+        <div class="section" id="hover" onmouseover="hover()" onmouseout="out()">
             <h4>keep mouse over to change color</h4>
         </div>
-        <div class="section">
-            <h4>click button to remove this section</h4>
+        <div class="section" id="remove" onclick="remove()">
+            <h4>click to remove this section</h4>
         </div>
         <div class="section">
             <form action="">
-                <input type="text">
+                <input type="text" placeholder="write tag and information and add to body">
+                <button onclick="add()">add new section</button>
             </form>
-            <h4>click button to add a new section</h4>
         </div>
     </div>
 </body>
