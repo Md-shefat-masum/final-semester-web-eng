@@ -23,6 +23,11 @@
             div.innerHTML = value ;
             parent.appendChild(div);
         }
+        function replace(){
+            var replace = document.getElementById('text');
+            var Text = document.getElementById('replace').value;
+            replace.innerHTML = Text;
+        }
     </script>
 </head>
 <body>
@@ -36,6 +41,12 @@
         <div class="section">
             <input type="text" id="value" placeholder="write tag and information and add to body">
             <button onclick="add()">add new section</button>
+        </div>
+        <div class="section">
+            <p id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt possimus architecto, saepe incidunt quia eos,
+                 distinctio alias provident quas inventore maxime sint blanditiis eveniet placeat omnis minus iure soluta dolor.</p>
+            <input type="text" id="replace" placeholder="write something">
+            <button onclick="replace()">replace the paragraph</button>
         </div>
     </div>
 </body>
